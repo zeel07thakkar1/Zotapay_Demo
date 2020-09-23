@@ -1,0 +1,562 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+:root
+{
+	--black: #000000;
+	--white: white;
+	--grey: #aeadac;
+	--bg-clr: #f7f8fa;
+	--text-clr: #666463;
+	--btn-clr: #3785e4;
+
+}
+html
+{
+	scroll-behavior: smooth;
+}
+body
+{
+	box-sizing: border-box;
+	position: relative;
+	height: auto;
+	overflow-x: hidden;
+}
+
+/* ----Designer Scrollbar--------- */
+body::-webkit-scrollbar
+{
+  width: 12px;
+}
+body::-webkit-scrollbar-track
+{
+  background-color: var(--grey);
+}
+body::-webkit-scrollbar-thumb
+{
+  background-color:var(--black);
+  /* border-radius: 5px; */
+  cursor: pointer;
+ }
+ .btn:focus
+ {
+ 	box-shadow: none !important;
+ 	outline: none !important;
+ }
+ /* ----Progress Bar----- */
+ .progress_bar_div
+	{
+	    z-index: 0;
+	    border: none;
+	    position: relative
+	}
+	#progressbar {
+    /* margin-bottom: 30px; */
+    overflow: hidden;
+    color: lightgrey
+}
+#progressbar .active {
+    color: var(--btn-clr);
+}
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    /* width: 25%; */
+    /* float: left; */
+    position: relative;
+    /* font-weight: 400 */
+    height: 90px;
+    
+}
+#progressbar #progress_step1::before {
+    
+    content: "1";
+}
+
+#progressbar #progress_step2::before {
+   content: "2";
+}
+
+#progressbar #progress_step3::before {
+    content: "3";
+}
+
+#progressbar #progress_step4::before {
+    content: "4";
+}
+#progressbar #progress_step5::before {
+    content: "5";
+}
+#progressbar #progress_step5::after {
+    height: 0px;
+}
+#progressbar li::before {
+    width: 40px;
+    height: 40px;
+    /* line-height: 45px; */
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    /* padding: 2px */
+ 	display: grid;
+ 	place-items: center;
+ 	
+}
+#progressbar li.active::after {
+    content: '';
+    width: 2px;
+    height: 62px;
+    position: absolute;
+    left: 50%;
+    top: 38px;
+    z-index: 0;
+   
+   
+}
+.active_border
+{
+	border: 4px double var(--btn-clr);
+}
+
+#progressbar li::after {
+    content: '';
+    width: 2px;
+    height: 62px;
+    position: absolute;
+    left: 50%;
+    top: 38px;
+    z-index: 0;
+    background-color: #d3d3d3;
+    border:none;
+    
+
+    
+}
+
+#progressbar li.active::before,
+#progressbar li.active::after {
+    background: var(--btn-clr);
+    
+}
+/*-----------------*/
+.time_div::-webkit-scrollbar
+{
+	width: 5px;
+
+}
+.time_div::-webkit-scrollbar-track
+{
+	background-color: transparent;
+}
+.time_div::-webkit-scrollbar-thumb
+{
+	background-color:var(--grey);
+  border-radius: 10px;
+  cursor: pointer;
+}
+input:focus , select:focus
+{
+	outline: none;
+	box-shadow: none !important;
+	
+}
+.country_time select:focus
+{
+	outline: none;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+.header_menu
+{
+	background-color: var(--black);
+	/* height: 200px; */
+
+}
+.header_menu #dropdown ul li
+{
+	margin: 0px 18px;
+}
+.header_menu #dropdown ul li a
+{
+	color: var(--white);
+}
+.header_menu .navbar-brand
+{
+	font-size: x-large;
+	color: var(--white);
+	margin: 0px;
+}
+.meeting_heading_div
+{
+	height: 88px;
+	
+}
+.meeting_heading_div span
+{
+	color: var(--grey);
+	font-size: 23px;
+	
+}
+.back_link
+{
+	font-size: small !important;
+	display: none;
+}
+.main_bg
+{
+	background-color: var(--bg-clr);
+	height: auto;
+	padding: 50px 0px 100px 0px;
+}
+.main_bg_content .main_content_text 
+{
+	color: var(--text-clr);
+	font-weight: 400;
+	font-size: 22px;
+}
+.main_bg_content .text-light-grey ,.last_page_content .text-light-grey
+{
+	color: var(--grey);
+	font-size: 16px;
+}
+.main_bg_content .text-dark-grey
+{
+	color: var(--text-clr);
+}
+.main_bg_img
+{
+	height: 355px;
+	width: 100%;
+	background: url('../img/step1_img.png') no-repeat center;
+	background-size: contain;
+}
+
+
+.step2_bg_img
+{
+	height: 355px;
+	width: 100%;
+	background: url('../img/step2_img.png') no-repeat center;
+	background-size: contain;
+}
+.step2_btns_div a ,.time_div a
+{
+	background-color: var(--white);
+}
+.step2_btns_div a:hover
+{
+	background-color: var(--btn-clr);
+}
+
+.step3_bg_img
+{
+	height: 355px;
+	width: 100%;
+	background: url('../img/step3_img.png') no-repeat center;
+	background-size: contain;
+}
+.country_time select
+{
+	border: none;
+	background-color: transparent;
+	width: 50%;
+}
+.calender #date .datepicker-inline
+{
+	width: 370px;
+}
+.calender #date .datepicker-inline .datepicker-days .table-condensed
+{
+	width: 100%;
+}
+.calender #date .datepicker-inline .datepicker-days .table-condensed thead tr .prev
+{
+	visibility: visible !important;
+}
+.calender #date .datepicker-inline .datepicker-days .table-condensed thead .calender_heading
+{
+	height: 50px;
+}
+.calender #date .datepicker-inline .datepicker-days .table-condensed thead .datepicker-switch
+{
+	text-align: left;
+	padding-left: 12px;
+	font-weight: 600;
+}
+.calender #date .datepicker-inline .datepicker-days .table-condensed thead tr .dow
+{
+
+	font-weight: 600;
+}
+.calender #date .datepicker-inline .datepicker-days .table-condensed tbody td, 
+.calender #date .datepicker-inline .datepicker-days .table-condensed tbody th
+{
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.calender #date .datepicker-inline .datepicker-days .table-condensed tbody td.day.focused,
+ .calender #date .datepicker-inline .datepicker-days .table-condensed tbody td.day:hover
+ 
+ {
+ 	background-color: var(--btn-clr);
+ 	color: var(--white);
+ }
+ .calender #date .datepicker-inline .datepicker-days .table-condensed tbody td.today
+ {
+ 	background-color: #c8cace;
+ 	color: var(--white);
+ 	background-image: none;
+ }
+ .datepicker-inline .datepicker-days .table-condensed thead .next, 
+ .datepicker-inline .datepicker-days .table-condensed thead .prev
+ {
+ 	
+ 	border-radius: 50%;
+
+ }
+.datepicker-inline .datepicker-days .table-condensed thead .datepicker-switch:hover, 
+ .datepicker-inline .datepicker-days .table-condensed thead .next:hover, 
+ .datepicker-inline .datepicker-days .table-condensed thead .prev:hover
+ {
+ 	background-color: var(--grey);
+ 	color: var(--white);
+ }
+ .time_div
+ {
+ 	height: 300px;
+ 	width: 160px;
+ 	
+ 	overflow-y: scroll;
+ }
+
+ .step4_bg_img
+ {
+ 	height: 355px;
+	width: 100%;
+	background: url('../img/step4_img.png') no-repeat center;
+	background-size: contain;
+ }
+ .step5_bg_img
+ {
+ 	height: 355px;
+	width: 100%;
+	background: url('../img/step5_img.png') no-repeat center;
+	background-size: contain;
+ }
+.payment_solution_div .payment_region_div
+{
+	height: auto;
+	width: 100%;
+	border: 1px solid var(--grey);
+	border-radius: 0.25rem;
+	padding: 8px;
+	margin: 10px 0px;
+}
+
+.step6_bg_img
+ {
+ 	height: 355px;
+	width: 100%;
+	background: url('../img/step6_img.png') no-repeat center;
+	background-size: contain;
+ }
+ .last_page_content_img
+ {
+ 	height: 450px;
+ 	width: 100%;
+ 	position: relative;
+ }
+ .last_page_content_img img
+ {
+ 	height: 100%;
+ 	width: 100%;
+ 	object-fit: contain;
+ }
+ .final_meeting_div
+ {
+ 	position: absolute;
+ 	background-color:transparent;
+ 	height: 108px;
+    width: 236px;
+    top: 89px;
+    right: 303px;
+    padding: 15px 5px;
+ }
+ .industry_info_form .final_meeting_time h5
+ {
+ 	color: var(--btn-clr);
+ }
+ .last_page_content h2
+ {
+ 	color: var(--btn-clr);
+ 	font-weight: bold;
+ }
+ .rightside_form2 , .rightside_form3 ,.rightside_form4,
+ .rightside_form5,.rightside_form6 , #last_page_div
+ {
+ 	display: none;
+ }
+@media screen and (max-width: 1024px)
+{
+	.final_meeting_div
+ 	{
+	    right: 211px;
+ 	}
+} 
+
+@media screen and (max-width: 768px) 
+{
+	.calender #date .datepicker-inline .datepicker-days .table-condensed thead .calender_heading
+	{
+		height: 60px;
+	}
+	.calender #date .datepicker-inline
+	{
+		width: 80%;
+	}
+	.calender #date .datepicker-inline .datepicker-days .table-condensed tbody td, 
+	.calender #date .datepicker-inline .datepicker-days .table-condensed tbody th
+	{
+		width: 50px;
+		height: 65px;
+	}
+	.time_div
+ 	{
+	 	height: auto;
+	 	width: auto;
+	 	display: block;
+    	text-align: center;
+	 	
+ 		
+ 	}
+ 	.final_meeting_div
+ 	{
+ 		width: 235px;
+    	top: 90px;
+    	right: 93px;
+ 	}
+	
+}
+@media screen and (max-width: 576px) 
+{
+	#progressbar li 
+	{
+	    list-style-type: none;
+	    width: 20%;
+    	float: left;
+    	
+	}
+	#progressbar li.active::after 
+	{
+	    content: '';
+	    width: 2px;
+	    top: -9px;
+    	z-index: -1;
+    	transform: rotate(90deg);
+    	left: 60px;
+   
+	}
+	#progressbar li::after 
+	{
+	    content: '';
+	    width: 2px;
+	    top: -9px;
+    	z-index: -1;
+    	transform: rotate(90deg);
+    	left: 60px;
+   
+	}
+
+	
+	
+
+	.step2_btns_div
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+	.step2_btns_div a
+	{
+		margin: 10px 0px !important;
+
+	}
+	.country_time select
+	{
+		width: 75%;
+	}
+	.calender #date .datepicker-inline
+	{
+		width: 100%;
+	}
+	.calender #date .datepicker-inline .datepicker-days .table-condensed thead .calender_heading
+	{
+		height: 40px;
+	}
+	.calender #date .datepicker-inline .datepicker-days .table-condensed tbody td, 
+	.calender #date .datepicker-inline .datepicker-days .table-condensed tbody th
+	{
+		width: 40px;
+		height: 40px;
+	}
+	.final_meeting_div
+ 	{
+ 		width: 125px;
+    	top: 153px;
+    	right: 16px;
+    	height: 60px;
+    	padding: 5px;
+ 	}
+ 	.final_meeting_div h6 , .final_meeting_div span
+ 	{
+ 		font-size: 10px;
+ 		margin-bottom: 0px;
+
+ 	}
+
+
+	
+}
+
+@media screen and (max-width: 450px) 
+{
+	.final_meeting_div
+ 	{
+ 		width: 148px;
+    	top: 141px;
+    	right: 18px;
+    	height: 67px;
+    	padding: 5px;
+ 	}
+ 	.final_meeting_div h6 , .final_meeting_div span
+ 	{
+ 		font-size: 10px;
+ 		margin-bottom: 0px;
+
+ 	}
+
+}
+
+
+
+@media screen and (max-width: 360px)
+{
+	.final_meeting_div 
+	{
+	    width: 148px;
+	    top: 151px;
+	    right: 0px;
+	    height: 67px;
+	    padding: 5px;
+
+	 }
+}
